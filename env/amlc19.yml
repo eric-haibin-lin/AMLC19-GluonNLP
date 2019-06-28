@@ -1,0 +1,25 @@
+name: amlc19
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - pip=18.1
+  - spacy
+  - nltk
+  - ipython
+  - ipykernel
+  - jupyter=1.0.0
+  - matplotlib=2.2.2
+  - pandas=0.23.4
+  - regex
+  - pip:
+    - mxnet-cu92mkl>=1.5.0b20190407
+    - sacremoses
+    - sentencepiece<0.2
+    - seaborn
+    - jieba
+    - d2l==0.9.2
+    - environment_kernels
+    - jupyter_contrib_nbextensions
+    - jupyter_nbextensions_configurator
+    - https://github.com/dmlc/gluon-nlp/tarball/aeb516494daa207720b428072ab49eeea7bfff75
