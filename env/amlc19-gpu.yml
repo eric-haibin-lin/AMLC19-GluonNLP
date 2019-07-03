@@ -1,4 +1,4 @@
-name: amlc19
+name: amlc19-gpu
 channels:
   - conda-forge
 dependencies:
