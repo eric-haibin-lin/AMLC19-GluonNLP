@@ -22,4 +22,4 @@ dependencies:
     - environment_kernels
     - jupyter_contrib_nbextensions
     - jupyter_nbextensions_configurator
-    - https://github.com/dmlc/gluon-nlp/tarball/be887415631cbd42a4e51907c82e7dba32af75fe
+    - https://github.com/dmlc/gluon-nlp/tarball/3f7a9413c285d4c3eabf47a36d34b926a4a3f1d1
