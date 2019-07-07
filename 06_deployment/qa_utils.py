@@ -11,12 +11,13 @@ def download_qa_ckpt():
     print('Downloaded checkpoint to {}'.format(result))
     return result
 
-def predict(dataset, all_results, vocab):
+def predict(dataset, all_results, vocab, number=0):
     tokenizer = nlp.data.BERTTokenizer(vocab=vocab, lower=True)
     transform = bert.data.qa.SQuADTransform(tokenizer, is_pad=False, is_training=False, do_lookup=False)
     dev_dataset = dataset.transform(transform._transform)
     from bert.bert_qa_evaluate import PredResult, predict
     all_predictions = collections.OrderedDict()
+    cnt = 0
     for features in dev_dataset:
         results = all_results[features[0].example_id]
     
@@ -32,3 +33,6 @@ def predict(dataset, all_results, vocab):
         for i in range(3):
             print('%.2f%% \t %s'%(nbest[i][1] * 100, nbest[i][0]))
         print('')
+        cnt += 1
+        if cnt == number:
+            break
