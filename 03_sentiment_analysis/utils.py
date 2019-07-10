@@ -63,8 +63,7 @@ def train(net, train_iter, test_iter, loss, trainer, num_epochs,
             metric = [a+b for a, b in zip(metric, (l, acc, labels.shape[0], labels.size))]
             timer.stop()
             if (i+1) % (num_batches // 5) == 0:
-                print(epoch+i/num_batches,
-                             (metric[0]/metric[2], metric[1]/metric[3], None))
+                print('loss %.3f, train acc %.3f' % (metric[0]/metric[2], metric[1]/metric[3]))
         test_acc = d2l.evaluate_accuracy_gpus(net, test_iter)
     print('loss %.3f, train acc %.3f, test acc %.3f' % (
         metric[0]/metric[2], metric[1]/metric[3], test_acc))
