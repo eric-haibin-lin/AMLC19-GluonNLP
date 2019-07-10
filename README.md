@@ -22,8 +22,8 @@ Agenda
 | 13:15-14:15 | Natural Language Processing and Deep Learning Basics          |
 | 14:15-14:25 | Break                                                         |
 | 14:25-15:15 | Context-free Representations with Word Embeddings             |
-| 15:15-15:55 | Contextual Representations with Transformer, BERT             |
-| 15:55-16:35 | Machine Translation and Sequence Generation                   |
+| 15:15-15:55 | Machine Translation and Sequence Generation                   |
+| 15:55-16:35 | Contextual Representations with BERT                          |
 | 16:35-16:45 | Break                                                         |
 | 16:45-17:15 | Model Deployment with TVM                                     |
 
