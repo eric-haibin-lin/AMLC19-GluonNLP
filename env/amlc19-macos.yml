@@ -1,0 +1,28 @@
+name: amlc19-cpu
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  - pip=18.1
+  - spacy
+  - nltk
+  - ipython
+  - ipykernel
+  - jupyter=1.0.0
+  - matplotlib=2.2.2
+  - pandas=0.23.4
+  - regex
+  - llvmdev
+  - pip:
+    - mxnet-mkl>=1.5.0b20190630
+    - sacremoses
+    - sentencepiece<0.2
+    - seaborn
+    - jieba
+    - d2l==0.10
+    - environment_kernels
+    - jupyter_contrib_nbextensions
+    - jupyter_nbextensions_configurator
+    - gluonnlp
+    - https://haichen-tvm.s3-us-west-2.amazonaws.com/tvm-0.6.dev0-cp36-cp36m-macosx_10_7_x86_64.whl
+    - https://haichen-tvm.s3-us-west-2.amazonaws.com/topi-0.6.dev0-py3-none-any.whl
