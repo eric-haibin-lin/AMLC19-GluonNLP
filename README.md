@@ -3,7 +3,7 @@ AMLC 2019: Dive into Deep Learning for Natural Language Processing
 
 <h3>Time: Friday, July 12, 2019<br/>Location: Meeting Center 02.100, [2031 7th Ave, Seattle, WA 98121](https://goo.gl/maps/LHWeYRDMYPvNKw3n6)</h3>
 
-<span style="color:grey">Presenter: Haibin Lin, Leonard Lausen, Haichen Shen, He He, Sheng Zha, Xingjian Shi</span><br/>
+<span style="color:grey">Presenter: Haibin Lin, Leonard Lausen, Xingjian Shi, Haichen Shen, He He, Sheng Zha</span><br/>
 
 <a href="https://aws.amazon.com/"><img src="_static/aws_logo.png" alt="AWS Icon" height="45"></a> &nbsp; <a href="https://aws.amazon.com/"><img src="_static/amazon_ai.png" alt="AmazonAI Icon" height="58"></a> &nbsp; <a href="http://mxnet.apache.org/"><img src="_static/apache_incubator_logo.png" alt="Apache Incubator Icon" height="39"></a> &nbsp; <a href="http://mxnet.apache.org/"><img src="_static/mxnet_logo_2.png" alt="MXNet Icon" height="39"></a> &nbsp; <a href="http://gluon-nlp.mxnet.io/"><img src="_static/gluon_logo_horizontal_small.png" alt="Gluon Icon" height="42"></a>
 
