@@ -1,4 +1,4 @@
-name: amlc19-cpu
+name: amlc19-macos-cpu
 channels:
   - conda-forge
 dependencies:
