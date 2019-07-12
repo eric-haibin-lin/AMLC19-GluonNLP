@@ -16,19 +16,31 @@ def predict(dataset, all_results, vocab):
     transform = bert.data.qa.SQuADTransform(tokenizer, is_pad=False, is_training=False, do_lookup=False)
     dev_dataset = dataset.transform(transform._transform)
     from bert.bert_qa_evaluate import PredResult, predict
+
+    all_results_np = collections.defaultdict(list)
+    for example_ids, pred_start, pred_end in all_results:
+        batch_size = example_ids.shape[0]
+        example_ids = example_ids.asnumpy().tolist()
+        pred_start = pred_start.reshape(batch_size, -1).asnumpy()
+        pred_end = pred_end.reshape(batch_size, -1).asnumpy()
+
+        for example_id, start, end in zip(example_ids, pred_start, pred_end):
+            all_results_np[example_id].append(PredResult(start=start, end=end))
+
     all_predictions = collections.OrderedDict()
+    top_results = []
     for features in dev_dataset:
-        results = all_results[features[0].example_id]
+        results = all_results_np[features[0].example_id]
     
         prediction, nbest = predict(
             features=features,
             results=results,
             tokenizer=nlp.data.BERTBasicTokenizer(lower=True))
     
-        print('\nContext: %s\n'%(' '.join(features[0].doc_tokens)))
+        curr_result = {}
         question = features[0].input_ids.index('[SEP]')
-        print('Question: %s\n'%(' '.join((features[0].input_ids[1:question]))))
-        print('Top predictions: ')
-        for i in range(3):
-            print('%.2f%% \t %s'%(nbest[i][1] * 100, nbest[i][0]))
-        print('')
+        curr_result['context'] = features[0].doc_tokens
+        curr_result['question'] = features[0].input_ids[1:question]
+        curr_result['prediction'] = nbest[0]
+        top_results.append(curr_result)
+    return top_results
