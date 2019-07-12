@@ -27,4 +27,8 @@ Agenda
 | 16:35-16:45 | Break                                                         |
 | 16:45-17:15 | Model Deployment with TVM                                     |
 
-
+FAQ
+---
+- **Q: How do I get access to the notebooks from the tutorial?**
+  - For setting it up on SageMaker notebook, you can find the instructions [here](./sagemaker_setup.md).
+  - For setting up with Conda, you can use the following Conda environment files: [CPU](env/amlc19-cpu.yml) and [GPU](env/amlc19-gpu.yml). (See this [guide](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) on creating Conda environment from environment file.)
