@@ -18,7 +18,7 @@ dependencies:
     - sentencepiece<0.2
     - seaborn
     - jieba
-    - d2l==0.10
+    - d2l==0.9.2
     - environment_kernels
     - jupyter_contrib_nbextensions
     - jupyter_nbextensions_configurator
